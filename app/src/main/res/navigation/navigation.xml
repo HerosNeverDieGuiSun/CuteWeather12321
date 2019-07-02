@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/fragmentMain">
+
+    <fragment android:id="@+id/fragmentMain" android:name="com.example.cuteweather.FragmentMain"
+              android:label="fragment_main" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_air" app:destination="@id/fragmentAir"/>
+        <action android:id="@+id/action_add" app:destination="@id/fragmentAdd"/>
+        <action android:id="@+id/action_city" app:destination="@id/fragmentCity"/>
+    </fragment>
+    <fragment android:id="@+id/fragmentCity" android:name="com.example.cuteweather.FragmentCity"
+              android:label="fragment_city" tools:layout="@layout/fragment_city">
+        <action android:id="@+id/action_city_back" app:destination="@id/fragmentMain"/>
+    </fragment>
+    <fragment android:id="@+id/fragmentAdd" android:name="com.example.cuteweather.FragmentAdd"
+              android:label="fragment_add" tools:layout="@layout/fragment_add">
+        <action android:id="@+id/action_add_back" app:destination="@id/fragmentMain"/>
+    </fragment>
+    <fragment android:id="@+id/fragmentAir" android:name="com.example.cuteweather.FragmentAir"
+              android:label="fragment_air" tools:layout="@layout/fragment_air">
+        <action android:id="@+id/action_air_back" app:destination="@id/fragmentMain"/>
+    </fragment>
+</navigation>
